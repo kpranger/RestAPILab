@@ -24,7 +24,7 @@ namespace RestAPILab.Controllers
         }
 
         [HttpPost("AddShipper")]
-        public Shipper AddShippers(int ShipperId, string CompanyName, string Phone)
+        public Shipper AddShipper(int ShipperId, string CompanyName, string Phone)
         {
             Shipper newShipper = new Shipper()
             {
@@ -38,7 +38,7 @@ namespace RestAPILab.Controllers
         }
 
         [HttpDelete("RemoveShipper")]
-        public Shipper RemovePet(int ShipperId)
+        public Shipper RemoveShipper(int ShipperId)
         {
             Shipper removed = northwindContext.Shippers.FirstOrDefault(s => s.ShipperId == ShipperId);
             northwindContext.Shippers.Remove(removed);
